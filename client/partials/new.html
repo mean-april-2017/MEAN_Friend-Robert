@@ -1,0 +1,32 @@
+<div>
+  <h1>NEW HTML PAGE</h1>
+
+  <form>
+    <div>
+      <p>Enter Your Friend's Name: <input ng-model='newFriend.name'></p>
+    </div>
+
+    <div>
+      <p>Enter Your Friend's Favorite Language: <input ng-model='newFriend.favoriteLanguage'></p>
+    </div>
+
+    <input type="submit" ng-click="addFriend()"value="Create Friend">
+  </form>
+
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name: </th>
+        <th>Favorite Language: </th>
+        <th>Actions: </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat = 'friend in friends'>
+        <td>{{friend.name}}</td>
+        <td>{{friend.favoriteLanguage}}</td>
+        <td><a href="#!/edit/{{friend._id}}">Edit</a></td>
+      </tr>
+    </tbody>
+  </table>
